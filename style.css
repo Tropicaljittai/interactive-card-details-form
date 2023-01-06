@@ -202,7 +202,7 @@ form button{
     cursor: pointer;
 }
 @media screen and (max-width:1023px) {
-    .firstcard .card_container img,.firstcard,.secondcard img,.secondcard{
+    .firstcard .carddesc img,.firstcard,.secondcard img,.secondcard{
         width: 300px;
     }
     .cardicon{
@@ -220,7 +220,7 @@ form button{
     .container{
         flex-direction: column;
     }
-    .firstcard .card_container img,.firstcard,.secondcard img,.secondcard{
+    .firstcard .carddesc img,.firstcard,.secondcard img,.secondcard{
         width: 280px;
     }
     .part1{
