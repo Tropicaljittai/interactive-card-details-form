@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Tropicaljittai/interactive-card-details-form)
-- Live Site URL: [Add live site URL here](https://tropicaljittai.github.io/interactive-card-details-form/)
+- Solution URL: [https://github.com/Tropicaljittai/interactive-card-details-form](https://github.com/Tropicaljittai/interactive-card-details-form)
+- Live Site URL: [https://tropicaljittai.github.io/interactive-card-details-form/](https://tropicaljittai.github.io/interactive-card-details-form/)
 
 ## My process
 
