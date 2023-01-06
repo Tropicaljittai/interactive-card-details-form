@@ -103,8 +103,8 @@ Learned a lot from this challenge, such as taking input with conditions, handlin
 
 ### Useful resources
 
-- [Example resource 1](https://www.youtube.com/watch?v=bQhD7gCUMNY&t=383&ab_channel=JavaScriptFront) - This tutorial basically carried me for the javascript part of the code
-- [Example resource 2](https://github.com/alishirani1384/Interactive-card-details-form) - This is the github in which the completed solution was posted that helped me when I encounter an error or bug and helped me check what's wrong/missing in my code.
+- [https://www.youtube.com/watch?v=bQhD7gCUMNY&t=383&ab_channel=JavaScriptFront](https://www.youtube.com/watch?v=bQhD7gCUMNY&t=383&ab_channel=JavaScriptFront) - This tutorial basically carried me for the javascript part of the code
+- [https://github.com/alishirani1384/Interactive-card-details-form](https://github.com/alishirani1384/Interactive-card-details-form) - This is the github in which the completed solution was posted that helped me when I encounter an error or bug and helped me check what's wrong/missing in my code.
 
 ## Your Detail 
 
