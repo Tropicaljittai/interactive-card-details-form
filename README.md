@@ -91,7 +91,9 @@ To see how you can add code snippets, see below:
 ```
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
+  function format(s) {
+  return s.toString().replace(/\d{4}(?=.)/g, "$& ");
+}
 }
 ```
 
