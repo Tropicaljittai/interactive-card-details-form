@@ -16,8 +16,6 @@ This is a solution to the [Interactive card detail page Quiz 2 challenge]
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -33,28 +31,25 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. Crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](https://cdn.discordapp.com/attachments/735871514104168519/1060844707174957078/image.png)
+![](https://media.discordapp.net/attachments/735871514104168519/1060844858681589770/image.png?width=1356&height=676)
+![](https://cdn.discordapp.com/attachments/735871514104168519/1060844911152345160/image.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Tropicaljittai/interactive-card-details-form)
+- Live Site URL: [Add live site URL here](https://tropicaljittai.github.io/interactive-card-details-form/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML
+- CSS
+- Javascript
+- jQuery
+- Google font
+- Visual Studio Code
 
 ### What I learned
 
@@ -64,10 +59,34 @@ To see how you can add code snippets, see below:
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
+<div class="card2">
+              <label for="card_number">Card Number</label>
+              <input
+                type="number"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="16"
+                maxlength="16"
+                placeholder="e.g. 1234 5678 9123 0000"
+                id="card_number"
+                required
+              />
+            </div>
 ```
 ```css
 .proud-of-this-css {
-  color: papayawhip;
+  root {
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+*,*>*{
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 }
 ```
 ```js
