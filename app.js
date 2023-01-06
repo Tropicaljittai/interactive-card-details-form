@@ -12,19 +12,19 @@ const submitBtn = document.getElementById("submit_btn");
 const compeleted = document.querySelector(".thankyou");
 const form = document.querySelector("form");
 
-function setCardNumber(e) {
+function inputCardNumber(e) {
     cardNumber.innerText = format(e.target.value);
 }
-function setCardName(e) {
+function inputCardName(e) {
   cardName.innerText = format(e.target.value);
 }
-function setCardMonth(e) {
+function inputCardMonth(e) {
   cardMonth.innerText = format(e.target.value);
 }
-function setCardYear(e) {
+function inputCardYear(e) {
   cardYear.innerText = format(e.target.value);
 }
-function setCardCvc(e) {
+function inputCardCvc(e) {
   cardCvc.innerText = format(e.target.value);
 }
 
@@ -84,9 +84,9 @@ function format(s) {
   return s.toString().replace(/\d{4}(?=.)/g, "$& ");
 }
 
-numberInp.addEventListener("keyup", setCardNumber);
-nameInp.addEventListener("keyup", setCardName);
-monthInp.addEventListener("keyup", setCardMonth);
-yearInp.addEventListener("keyup", setCardYear);
-cvcInp.addEventListener("keyup", setCardCvc);
+numberInp.addEventListener("keyup", inputCardNumber);
+nameInp.addEventListener("keyup", inputCardName);
+monthInp.addEventListener("keyup", inputCardMonth);
+yearInp.addEventListener("keyup", inputCardYear);
+cvcInp.addEventListener("keyup", inputCardCvc);
 submitBtn.addEventListener("click", handleSubmit);
