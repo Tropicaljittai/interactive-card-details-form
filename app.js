@@ -9,67 +9,84 @@ const yearInp = document.getElementById("card_year");
 const cardCvc = document.getElementById("cvc");
 const cvcInp = document.getElementById("card_cvc");
 const submitBtn = document.getElementById("submit_btn");
-const completed = document.querySelector(".thankyou");
+const compeleted = document.querySelector(".thankyou");
 const form = document.querySelector("form");
 
-function formatCardNumber(event) {
-  cardNumber.innerText = format(event.target.value);
+function inputCardNumber(e) {
+    cardNumber.innerText = format(e.target.value);
+}
+function inputCardName(e) {
+  cardName.innerText = format(e.target.value);
+}
+function inputCardMonth(e) {
+  cardMonth.innerText = format(e.target.value);
+}
+function inputCardYear(e) {
+  cardYear.innerText = format(e.target.value);
+}
+function inputCardCvc(e) {
+  cardCvc.innerText = format(e.target.value);
 }
 
-function formatCardName(event) {
-  cardName.innerText = format(event.target.value);
+function handleSubmit(e) {
+    e.preventDefault();
+    if (!nameInp.value) {
+      nameInp.classList.add('error');
+      nameInp.parentElement.classList.add("error_message")
+    } else {
+      nameInp.classList.remove("error");
+      nameInp.parentElement.classList.remove("error_message");
+    }
+    if (!numberInp.value) {
+      numberInp.classList.add('error')
+      numberInp.parentElement.classList.add("error_message");
+    } else if (numberInp.value.length < 16) {
+        numberInp.classList.add("error")
+    } else {
+      numberInp.classList.remove("error");
+      numberInp.parentElement.classList.remove("error_message");
+    }
+    if (!monthInp.value) {
+      monthInp.classList.add("error")
+      monthInp.parentElement.classList.add("error_message");
+    } else {
+      monthInp.classList.remove("error");
+      monthInp.parentElement.classList.remove("error_message");
+    }
+    if (!yearInp.value) {
+      yearInp.classList.add("error")
+      yearInp.parentElement.classList.add("error_message");
+    } else {
+      yearInp.classList.remove("error");
+      yearInp.parentElement.classList.remove("error_message");
+    }
+    if (!cvcInp.value) {
+      cvcInp.classList.add("error")
+      cvcInp.parentElement.classList.add("error_message");
+    } else {
+      cvcInp.classList.remove("error");
+      cvcInp.parentElement.classList.remove("error_message");
+    }
+    if (
+      nameInp.value &&
+      numberInp.value &&
+      monthInp.value &&
+      yearInp.value &&
+      cvcInp.value &&
+      numberInp.value.length == 16
+    ) {
+      compeleted.classList.remove("hidden");
+      form.classList.add("hidden");
+    }
+  
+}
+function format(s) {
+  return s.toString().replace(/\d{4}(?=.)/g, "$& ");
 }
 
-function formatCardMonth(event) {
-  cardMonth.innerText = format(event.target.value);
-}
-
-function formatCardYear(event) {
-  cardYear.innerText = format(event.target.value);
-}
-
-function formatCardCvc(event) {
-  cardCvc.innerText = format(event.target.value);
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-  if (!nameInp.value) {
-    nameInp.classList.add("error");
-    nameInp.parentElement.classList.add("error_message");
-  } else {
-    nameInp.classList.remove("error");
-    nameInp.parentElement.classList.remove("error_message");
-  }
-
-  if (!numberInp.value) {
-    numberInp.classList.add("error");
-    numberInp.parentElement.classList.add("error_message");
-  } else if (numberInp.value.length < 16) {
-    numberInp.classList.add("error");
-  } else {
-    numberInp.classList.remove("error");
-    numberInp.parentElement.classList.remove("error_message");
-  }
-
-  if (!monthInp.value) {
-    monthInp.classList.add("error");
-    monthInp.parentElement.classList.add("error_message");
-  } else {
-    monthInp.classList.remove("error");
-    monthInp.parentElement.classList.remove("error_message");
-  }
-
-  if (!yearInp.value) {
-    yearInp.classList.add("error");
-    yearInp.parentElement.classList.add("error_message");
-  } else {
-    yearInp.classList.remove("error");
-    yearInp.parentElement.classList.remove("error_message");
-  }
-
-  if (!cvcInp.value) {
-    cvcInp.classList.add("error");
-    cvcInp.parentElement.classList.add("error_message");
-  }
+numberInp.addEventListener("keyup", inputCardNumber);
+nameInp.addEventListener("keyup", inputCardName);
+monthInp.addEventListener("keyup", inputCardMonth);
+yearInp.addEventListener("keyup", inputCardYear);
+cvcInp.addEventListener("keyup", inputCardCvc);
+submitBtn.addEventListener("click", handleSubmit);
